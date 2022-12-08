@@ -1,6 +1,6 @@
 CREATE TABLE Publisher (
   PublisherID INTEGER  NOT NULL  ,
-  Name VARCHAR(50)    ,
+  Name VARCHAR(50)  NOT NULL  ,
   WebsiteURL VARCHAR(100)    ,
   City VARCHAR(30)    ,
   Street VARCHAR(30)    ,
@@ -12,30 +12,30 @@ PRIMARY KEY(PublisherID));
 
 CREATE TABLE Warehouse (
   WarehouseID INTEGER  NOT NULL  ,
-  PhoneNumber CHAR(10)    ,
-  City CHAR(30)    ,
-  Street CHAR(30)    ,
-  StreetNumber INTEGER    ,
-  Postcode CHAR(10)      ,
+  PhoneNumber CHAR(10)  NOT NULL  ,
+  City CHAR(30)  NOT NULL  ,
+  Street CHAR(30)  NOT NULL  ,
+  StreetNumber INTEGER  NOT NULL  ,
+  Postcode CHAR(10)  NOT NULL    ,
 PRIMARY KEY(WarehouseID));
 
 
 
 CREATE TABLE Writer (
   WriterID INTEGER  NOT NULL  ,
-  FirstName VARCHAR(30)    ,
-  LastName VARCHAR(30)    ,
-  Email VARCHAR(50)      ,
+  FirstName VARCHAR(30)  NOT NULL  ,
+  LastName VARCHAR(30)  NOT NULL  ,
+  Email VARCHAR(50)  NOT NULL    ,
 PRIMARY KEY(WriterID));
 
 
 
 CREATE TABLE Customer (
   CustomerID INTEGER  NOT NULL  ,
-  FirstName VARCHAR(30)    ,
-  LastName VARCHAR(30)    ,
-  FathersName VARCHAR(30)    ,
-  Email VARCHAR(50)    ,
+  FirstName VARCHAR(30)  NOT NULL  ,
+  LastName VARCHAR(30)  NOT NULL  ,
+  FathersName VARCHAR(30)  NOT NULL  ,
+  Email VARCHAR(50)  NOT NULL  ,
   City VARCHAR(30)    ,
   Street VARCHAR(30)    ,
   StreetNumber INTEGER    ,
@@ -70,11 +70,11 @@ CREATE TABLE Book (
   BookID INTEGER  NOT NULL  ,
   WarehouseID INTEGER  NOT NULL  ,
   PublisherID INTEGER  NOT NULL  ,
-  Title VARCHAR(100)    ,
-  ISBN VARCHAR(13)    ,
-  PublicationYear INTEGER    ,
-  Price INTEGER    ,
-  Quantity INTEGER      ,
+  Title VARCHAR(100)  NOT NULL  ,
+  ISBN VARCHAR(13)  NOT NULL  ,
+  PublicationYear INTEGER  NOT NULL  ,
+  Price INTEGER  NOT NULL  ,
+  Quantity INTEGER  NOT NULL    ,
 PRIMARY KEY(BookID));
 
 
